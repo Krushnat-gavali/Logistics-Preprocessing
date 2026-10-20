@@ -1,0 +1,12 @@
+Column,Category,Frequency,Percentage,Total_Rows,Non_Missing_Count
+Transport_Mode,Road,31,47.69230769230769,65,65
+Transport_Mode,Rail,27,41.53846153846154,65,65
+Transport_Mode,Air,7,10.76923076923077,65,65
+Customer_City,Bengaluru,11,16.923076923076923,65,65
+Customer_City,Hyderabad,10,15.384615384615385,65,65
+Customer_City,Mumbai,8,12.307692307692308,65,65
+Customer_City,Kolkata,8,12.307692307692308,65,65
+Customer_City,Pune,8,12.307692307692308,65,65
+Customer_City,Chennai,7,10.76923076923077,65,65
+Customer_City,Delhi,7,10.76923076923077,65,65
+Customer_City,Ahmedabad,6,9.230769230769232,65,65

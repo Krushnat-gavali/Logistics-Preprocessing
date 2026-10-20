@@ -1,0 +1,4 @@
+Column,Valid_Count,Q1,Q3,IQR,Lower_Bound,Upper_Bound,Outlier_Count,Outlier_Percentage,Outlier_Values
+Distance_KM,63,601.5,1313.0,711.5,-465.75,2380.25,1,1.5873015873015872,6800.0
+Delivery_Days,64,2.75,6.0,3.25,-2.125,10.875,1,1.5625,42.0
+Shipping_Cost,64,355.2975,662.62,307.3225,-105.68624999999997,1123.60375,1,1.5625,3450.0

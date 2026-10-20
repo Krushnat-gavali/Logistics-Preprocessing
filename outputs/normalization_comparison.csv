@@ -1,0 +1,4 @@
+Column_Name,Original_Minimum,Original_Maximum,Original_Mean,Original_Median,Original_Standard_Deviation,Original_Range,Normalized_Column_Name,Normalized_Minimum,Normalized_Maximum,Normalized_Mean,Normalized_Median,Normalized_Standard_Deviation,Original_Missing_Values,Invalid_Numeric_Entries,Normalized_Missing_Values,Normalization_Status
+Distance_KM,152.0,6800.0,1020.6825396825396,947.0,853.2374934179177,6648.0,Distance_KM_Normalized,0.0,1.0,0.13066825205814372,0.11958483754512636,0.12834498998464466,0,0,0,SUCCESS
+Delivery_Days,1.0,42.0,4.73015873015873,4.0,5.230821650151024,41.0,Delivery_Days_Normalized,0.0,1.0,0.09097948122338369,0.07317073170731707,0.12758101585734205,0,0,0,SUCCESS
+Shipping_Cost,185.72,3450.0,543.233253968254,507.065,422.28776083678696,3264.28,Shipping_Cost_Normalized,0.0,1.0,0.109522851583888,0.09844284191307119,0.12936628010979048,0,0,0,SUCCESS

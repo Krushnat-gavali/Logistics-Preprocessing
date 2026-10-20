@@ -1,0 +1,4 @@
+﻿Column_Name,Total_Dataset_Rows,Valid_Observations,Missing_Values,Invalid_Numerical_Entries,Minimum,Q1,Median,Q3,Maximum,Mean,Standard_Deviation,IQR,Lower_Boundary,Upper_Boundary,Potential_Outlier_Count,Outlier_Percentage,Detection_Method,IQR_Multiplier,Records_Removed,Analysis_Status
+Distance_KM,63,63,0,0,152.0,601.5,947.0,1313.0,6800.0,1020.6825396825396,853.2374934179177,711.5,-465.75,2380.25,1,1.5873015873015872,Interquartile Range (IQR),1.5,0,SUCCESSFUL
+Delivery_Days,63,63,0,0,1.0,2.5,4.0,6.0,42.0,4.73015873015873,5.230821650151024,3.5,-2.75,11.25,1,1.5873015873015872,Interquartile Range (IQR),1.5,0,SUCCESSFUL
+Shipping_Cost,63,63,0,0,185.72,352.605,507.065,664.62,3450.0,543.233253968254,422.28776083678696,312.015,-115.41749999999996,1132.6425,1,1.5873015873015872,Interquartile Range (IQR),1.5,0,SUCCESSFUL

@@ -1,0 +1,7 @@
+Column,Data_Type,Total_Rows,Missing_Count,Missing_Percentage,Non_Missing_Count
+Order_ID,str,65,0,0.0,65
+Transport_Mode,str,65,0,0.0,65
+Distance_KM,float64,65,2,3.076923076923077,63
+Delivery_Days,float64,65,1,1.5384615384615385,64
+Shipping_Cost,float64,65,1,1.5384615384615385,64
+Customer_City,str,65,0,0.0,65

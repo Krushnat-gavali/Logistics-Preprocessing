@@ -1,0 +1,20 @@
+Metric,Value
+Original row count,65
+Final cleaned row count,63
+Original column count,6
+Final column count,6
+Exact duplicate rows removed,2
+Original missing-value count,4
+Original blank categorical strings,0
+Blank categorical strings in deduplicated data,0
+Invalid numeric entries converted to missing,0
+Numerical values imputed,4
+Remaining missing values,0
+Missing Order_ID values after cleaning,0
+Duplicate Order_ID count before cleaning,2
+Duplicate Order_ID count after cleaning,0
+Unique non-missing Order_ID values after cleaning,63
+Median used for Distance_KM,947.0
+Median used for Delivery_Days,4.0
+Median used for Shipping_Cost,507.065
+Final execution status,SUCCESSFUL

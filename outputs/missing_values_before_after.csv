@@ -1,0 +1,7 @@
+Column_Name,Original_Missing_Values,Original_Blank_Strings,Working_Blank_Strings_Before_Sanitization,Invalid_Numeric_Entries,Values_Imputed,Remaining_Missing_Values,Cleaning_Status
+Order_ID,0,0,0,0,0,0,No Missing Values Remaining
+Transport_Mode,0,0,0,0,0,0,No Missing Values Remaining
+Distance_KM,2,0,0,0,2,0,No Missing Values Remaining
+Delivery_Days,1,0,0,0,1,0,No Missing Values Remaining
+Shipping_Cost,1,0,0,0,1,0,No Missing Values Remaining
+Customer_City,0,0,0,0,0,0,No Missing Values Remaining

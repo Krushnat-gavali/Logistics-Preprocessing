@@ -1,0 +1,4 @@
+﻿Order_ID,Transport_Mode,Customer_City,Numerical_Column,Observed_Value,Lower_Boundary,Upper_Boundary,Outlier_Type,Dataset_Row_Index
+ORD-1041,Road,Delhi,Distance_KM,6800.0,-465.75,2380.25,Above Upper Boundary,40
+ORD-1011,Road,Hyderabad,Delivery_Days,42.0,-2.75,11.25,Above Upper Boundary,10
+ORD-1026,Road,Delhi,Shipping_Cost,3450.0,-115.41749999999996,1132.6425,Above Upper Boundary,25
