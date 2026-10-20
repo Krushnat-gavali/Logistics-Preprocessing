@@ -2,7 +2,7 @@
 
 ## About This Project
 
-This project is part of my Week 2 internship assignment at YuvaIntern. The main purpose of this assignment is to understand how raw data is collected, inspected, cleaned and prepared before it is used for further analysis.
+The main purpose of this assignment is to understand how raw data is collected, inspected, cleaned and prepared before it is used for further analysis.
 
 I chose a logistics dataset because shipment information contains several types of data, such as delivery distance, delivery time, shipping cost, transportation mode and customer location. If this information contains missing values, duplicate records or unusual values, the results of the analysis may not be reliable.
 
