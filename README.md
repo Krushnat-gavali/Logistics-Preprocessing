@@ -2,69 +2,91 @@
 
 ## About This Project
 
-The main purpose of this assignment is to understand how raw data is collected, inspected, cleaned and prepared before it is used for further analysis.
+This project was developed as part of the **YuvaIntern Week 2 assignment: Data Collection, Cleaning, and Preprocessing for Logistics Analysis**.
 
-I chose a logistics dataset because shipment information contains several types of data, such as delivery distance, delivery time, shipping cost, transportation mode and customer location. If this information contains missing values, duplicate records or unusual values, the results of the analysis may not be reliable.
+The main purpose of this project is to understand how raw data can be collected, checked, cleaned, and prepared before using it for further analysis. In real-world logistics operations, data may contain missing values, duplicate records, inconsistent information, and unusually high or low values. If these issues are not handled properly, they can affect the accuracy of reports and the results of future data analysis.
 
-For this project, I created a sample logistics dataset and used Python to perform the preprocessing steps. I started by checking the structure and quality of the data. After that, I explored the numerical and categorical columns, handled missing values, removed duplicate records, identified potential outliers and applied Min-Max normalization to selected numerical features.
+For this assignment, I created a simulated logistics dataset and used Python to perform different preprocessing operations. The dataset contains information such as order ID, transport mode, delivery distance, delivery time, shipping cost, and customer city.
 
-I also saved the processed datasets, summary tables and charts so that the results can be checked separately without running every calculation again.
+I divided the work into separate Python scripts so that each stage could be developed, tested, and understood independently. I also created a main program to run the complete preprocessing pipeline in the correct order.
 
-The dataset used in this project is simulated for educational purposes. It does not represent actual shipment records from a logistics company.
+The project generates cleaned and normalized datasets, summary CSV files, and visualizations. These outputs help me understand the condition of the original data and check the results after preprocessing.
+
+The dataset used in this project is simulated for educational purposes. It is not collected from an actual logistics company.
+
+---
 
 ## Objectives
 
-The objectives of this assignment are:
+The main objectives of this project are:
 
-- To create and work with a sample logistics dataset.
-- To understand the structure of a CSV dataset using Python.
-- To identify missing values and duplicate records.
-- To explore numerical columns using descriptive statistics.
-- To examine categorical columns such as transportation mode and customer city.
-- To handle missing numerical values using median imputation.
-- To detect potential outliers using the Interquartile Range (IQR) method.
-- To apply Min-Max normalization to selected numerical features.
-- To save the cleaned and normalized datasets separately.
-- To generate summary files and visualizations for understanding the results.
-- To organize the project so that the individual preprocessing steps can be reviewed and executed.
+1. To understand the importance of data collection in logistics analysis.
+2. To create a sample logistics dataset using Python.
+3. To inspect the dataset and identify its columns, data types, and basic statistics.
+4. To detect missing values and duplicate records.
+5. To handle missing numerical values using median imputation.
+6. To identify potential outliers using the Interquartile Range (IQR) method.
+7. To apply Min-Max normalization to selected numerical columns.
+8. To compare the data before and after preprocessing.
+9. To generate CSV summaries and graphical visualizations.
+10. To organize the project into separate Python scripts and run them through a main program.
+11. To understand how data preprocessing prepares a dataset for future analysis.
 
-## Technologies and Libraries Used
+---
 
-I used Python for the main data preprocessing tasks. The following tools and libraries were used in the project.
+## Technologies Used
 
-| Technology or Library | Purpose |
+The following tools and Python libraries were used in this project.
+
+| Technology | Purpose |
 |---|---|
-| Python | Writing and running the preprocessing programs |
-| Pandas | Reading CSV files, examining data, cleaning records and saving results |
-| NumPy | Supporting numerical operations |
+| Python | Main programming language |
+| Pandas | Loading, cleaning, and processing tabular data |
+| NumPy | Numerical operations |
 | Matplotlib | Creating charts and visualizations |
-| Scikit-learn | Providing data preprocessing functionality where required |
-| Visual Studio Code | Writing, editing and running Python files |
-| Git | Tracking changes to project files |
-| GitHub | Storing and sharing the project repository |
+| Seaborn | Creating statistical visualizations |
+| Scikit-learn | Supporting data preprocessing and machine-learning workflows |
+| Python-docx | Supporting the generation of the project report |
+| Visual Studio Code | Writing and running Python programs |
+| Git | Tracking changes in project files |
+| GitHub | Hosting the project repository |
+
+---
 
 ## Dataset Description
 
-I created a sample dataset containing logistics and shipment-related information. The original dataset contains 65 rows and 6 columns.
+The project uses a simulated logistics dataset stored in CSV format.
 
-Each row represents a sample shipment record. The columns describe the order, the transportation method, the distance travelled, the delivery time, the shipping cost and the customer's city.
+The original dataset contains **65 rows and 6 columns**. Each row represents a logistics order.
 
-| Column Name | Description | Data Type |
-|---|---|---|
-| Order_ID | Unique identification number assigned to an order | Text |
-| Transport_Mode | Transportation method used for the shipment | Text |
-| Distance_KM | Distance covered during transportation, measured in kilometres | Numerical |
-| Delivery_Days | Time taken to deliver the order, measured in days | Numerical |
-| Shipping_Cost | Cost associated with shipping the order, recorded in INR | Numerical |
-| Customer_City | City associated with the customer | Text |
+### Dataset Columns
 
-The dataset contains three main numerical features: `Distance_KM`, `Delivery_Days` and `Shipping_Cost`. These columns are useful for studying the distribution of shipment distances, delivery times and transportation costs.
+| Column Name | Description |
+|---|---|
+| `Order_ID` | Unique identifier assigned to an order |
+| `Transport_Mode` | Mode of transportation used for the order |
+| `Distance_KM` | Distance travelled or recorded for the order, in kilometres |
+| `Delivery_Days` | Number of days taken for delivery |
+| `Shipping_Cost` | Shipping cost associated with the order, in Indian rupees |
+| `Customer_City` | City associated with the customer |
 
-The categorical features, `Transport_Mode` and `Customer_City`, help describe the types of transportation and the locations represented in the sample data.
+The dataset contains both numerical and categorical information. Numerical columns are useful for statistical analysis and normalization, while categorical columns help summarize information such as transport modes and customer cities.
+
+### Dataset Files
+
+The `data` folder contains three main CSV files:
+
+- `logistics_data.csv` — the original simulated dataset.
+- `logistics_data_cleaned.csv` — the dataset after duplicate removal and missing-value treatment.
+- `logistics_data_normalized.csv` — the cleaned dataset with additional normalized numerical columns.
+
+The original dataset is kept separate so that the results of preprocessing can be compared with the initial data.
+
+---
 
 ## Project Structure
 
-I organized the project into separate Python programs and folders. Each Python file handles a particular part of the preprocessing process, while the `data` and `outputs` folders store the input datasets, processed datasets and generated results.
+I organized the project into separate Python programs and folders. Each script handles a particular stage of the preprocessing process, while the `data` and `outputs` folders store the datasets and generated results.
 
 ```text
 Logistics-Preprocessing/
@@ -100,287 +122,490 @@ Logistics-Preprocessing/
 ├── data_cleaning.py
 ├── outlier_detection.py
 ├── normalization.py
+├── main.py
 ├── requirements.txt
+├── .gitignore
 └── README.md
 ```
 
-The output folder may contain additional files if more reports or visualizations are generated during later development.
+The project structure may change if additional analysis scripts or output files are added in the future.
 
-## Work Performed
+### Purpose of the Main Files
 
-### 1. Data Collection
+**`create_dataset.py`**
 
-I started by creating a sample logistics dataset using Python. The dataset contains order identifiers, transportation modes, delivery distances, delivery durations, shipping costs and customer cities.
+Creates the simulated logistics dataset used for this educational project.
 
-I stored the original dataset as `data/logistics_data.csv`. Keeping the raw data in a separate file makes it possible to compare the original records with the processed results.
+**`data_collection.py`**
 
-I also used a separate data collection script to load and inspect the dataset. This helped me confirm that the file could be read correctly and that the expected columns were available for the next steps.
+Handles the dataset collection or preparation stage of the workflow.
 
-Because the data is simulated, the results are intended to demonstrate preprocessing techniques rather than describe the actual performance of a logistics business.
+**`data_exploration.py`**
 
-### 2. Initial Data Exploration
+Examines the dataset and generates descriptive statistics, missing-value information, categorical summaries, and visualizations.
 
-Before modifying the dataset, I examined its structure and checked the quality of the available information.
+**`data_cleaning.py`**
 
-The initial dataset contained 65 rows and 6 columns. During this stage, I checked the number of records, column names, data types, missing values, duplicate rows and basic statistical information.
+Removes exact duplicate records and handles missing numerical values.
 
-I also examined the categorical columns to understand how the transportation modes and customer cities were distributed.
+**`outlier_detection.py`**
 
-The initial inspection identified the following issues:
+Uses the IQR method to identify potential outliers in selected numerical columns.
 
-- Two duplicate rows were present.
-- Four numerical values were missing.
-- The missing values were found in `Distance_KM`, `Delivery_Days` and `Shipping_Cost`.
-- Some numerical values were much larger than the other observations and required further investigation.
+**`normalization.py`**
 
-The missing-value distribution was:
+Applies Min-Max normalization to the selected numerical columns and creates a normalized dataset.
 
-| Column | Missing Values |
+**`main.py`**
+
+Runs the preprocessing scripts in sequence, helping execute the complete workflow from a single command.
+
+**`requirements.txt`**
+
+Lists the Python libraries required to run the project.
+
+**`.gitignore`**
+
+Specifies files and folders that Git should ignore, such as Python cache files, virtual environments, and environment configuration files.
+
+**`data/`**
+
+Stores the original, cleaned, and normalized datasets.
+
+**`outputs/`**
+
+Stores the CSV summaries, comparison tables, and visualizations generated during preprocessing.
+
+---
+
+## Project Workflow
+
+The project follows a sequence of data preparation steps.
+
+### Step 1: Data Collection and Dataset Preparation
+
+The first stage prepares the simulated logistics dataset for analysis. The dataset contains order identifiers, transport modes, delivery distances, delivery durations, shipping costs, and customer cities.
+
+For this assignment, the dataset is generated or prepared locally rather than retrieved from a real logistics database or an external company API.
+
+The original CSV file is stored in the `data` folder and is used as the input for the remaining stages.
+
+### Step 2: Data Exploration
+
+Before cleaning the data, I examined the dataset to understand its structure and identify possible data-quality issues.
+
+The exploration stage includes:
+
+- Checking the number of rows and columns.
+- Reviewing column names and data types.
+- Calculating descriptive statistics for numerical columns.
+- Counting the values in categorical columns.
+- Identifying missing values.
+- Checking the distribution of numerical features.
+- Creating charts to understand the data visually.
+
+The exploration results are saved in CSV files and PNG images inside the `outputs` folder.
+
+### Step 3: Data Cleaning
+
+The next stage focuses on improving the quality of the dataset.
+
+The cleaning process includes:
+
+- Identifying and removing exact duplicate rows.
+- Checking missing values in numerical columns.
+- Filling missing numerical values using the median.
+- Checking the dataset again after cleaning.
+- Saving the cleaned dataset separately.
+
+The median was selected for missing numerical values because it is less affected by extreme observations than the mean.
+
+The original CSV file is preserved, and the cleaned data is saved as `logistics_data_cleaned.csv`.
+
+### Step 4: Outlier Detection
+
+After cleaning, the project uses the **Interquartile Range (IQR) method** to identify potential outliers in the following columns:
+
+- `Distance_KM`
+- `Delivery_Days`
+- `Shipping_Cost`
+
+The IQR is calculated as:
+
+**IQR = Q3 − Q1**
+
+Where:
+
+- **Q1** is the first quartile, or 25th percentile.
+- **Q3** is the third quartile, or 75th percentile.
+
+The lower and upper boundaries are calculated using:
+
+**Lower Bound = Q1 − 1.5 × IQR**
+
+**Upper Bound = Q3 + 1.5 × IQR**
+
+Values outside these boundaries are flagged as potential outliers.
+
+In this project, outlier detection is performed separately from data cleaning. The detected records are retained in the dataset rather than being automatically deleted or replaced. This helps preserve potentially important logistics observations for further investigation.
+
+### Step 5: Data Normalization
+
+The final preprocessing stage applies Min-Max normalization to the three selected numerical columns.
+
+The formula is:
+
+**Normalized Value = (Value − Minimum) / (Maximum − Minimum)**
+
+This transformation scales the selected numerical values to a range between 0 and 1.
+
+The following columns are normalized:
+
+- `Distance_KM` → `Distance_KM_Normalized`
+- `Delivery_Days` → `Delivery_Days_Normalized`
+- `Shipping_Cost` → `Shipping_Cost_Normalized`
+
+The normalized columns are added to a separate dataset. The original numerical columns remain available for comparison and interpretation.
+
+The normalized dataset is saved as `logistics_data_normalized.csv`.
+
+---
+
+## Results and Observations
+
+The following results were obtained from the dataset used in this project.
+
+### 1. Original Dataset
+
+The original dataset contains:
+
+| Measurement | Result |
 |---|---:|
-| Distance_KM | 2 |
-| Delivery_Days | 1 |
-| Shipping_Cost | 1 |
-| **Total** | **4** |
+| Total rows | 65 |
+| Total columns | 6 |
+| Exact duplicate rows | 2 |
+| Missing values in `Distance_KM` | 2 |
+| Missing values in `Delivery_Days` | 1 |
+| Missing values in `Shipping_Cost` | 1 |
+| Total missing numerical values | 4 |
 
-I generated summary CSV files and charts during this stage. The charts helped me examine the distributions of distance, delivery time and shipping cost, while the summary tables provided numerical information about the dataset.
+These results show that the dataset contained duplicate records and missing numerical values that needed to be handled before further analysis.
 
-### 3. Data Cleaning
+### 2. Data Cleaning Results
 
-After exploring the original data, I worked on removing duplicate records and handling missing numerical values.
+After removing exact duplicate rows and filling missing numerical values using their respective medians, the cleaned dataset contains 63 rows and 6 columns.
 
-#### Removing Duplicate Records
-
-The original dataset contained two exact duplicate rows. I removed these duplicate records so that identical rows would not unnecessarily affect the subsequent analysis.
-
-After removing the two duplicate rows, the dataset contained 63 rows.
-
-I kept the original dataset unchanged and saved the cleaned version separately as:
-
-`data/logistics_data_cleaned.csv`
-
-#### Handling Missing Values
-
-The missing values were found in three numerical columns. Instead of deleting every row containing a missing value, I used median imputation.
-
-The median is the middle value of a sorted set of observations. It can be useful when dealing with numerical data that contains unusually large or small values because it is generally less affected by extreme observations than the mean.
-
-The following median values were used:
-
-| Column | Missing Values | Median Used |
+| Measurement | Before Cleaning | After Cleaning |
 |---|---:|---:|
-| Distance_KM | 2 | 947 |
-| Delivery_Days | 1 | 4 |
-| Shipping_Cost | 1 | 507.065 |
+| Number of rows | 65 | 63 |
+| Number of columns | 6 | 6 |
+| Exact duplicate rows | 2 | 0 |
+| Missing `Distance_KM` values | 2 | 0 |
+| Missing `Delivery_Days` values | 1 | 0 |
+| Missing `Shipping_Cost` values | 1 | 0 |
+| Total missing values in these numerical columns | 4 | 0 |
 
-The missing values were replaced using the median of the corresponding numerical column.
+The median values used to fill missing numerical data were:
 
-After cleaning, the dataset contained 63 rows and 6 columns, with no missing values in the columns checked by the cleaning program.
+| Column | Median Used |
+|---|---:|
+| `Distance_KM` | 947 |
+| `Delivery_Days` | 4 |
+| `Shipping_Cost` | 507.065 |
 
-I also verified the cleaned data and saved summary files showing the cleaning results and missing values before and after processing.
+The cleaned dataset was saved separately so that the original data remained available for reference.
 
-One important decision was to retain unusual numerical observations during cleaning. A large value is not automatically an error, so I investigated potential outliers separately instead of deleting them without further evidence.
+### 3. Outlier Detection Results
 
-### 4. Outlier Detection Using the IQR Method
+The IQR method identified three potential outlier observations in the cleaned dataset.
 
-After cleaning the dataset, I used the Interquartile Range method to identify potentially unusual numerical observations.
+| Column | Q1 | Q3 | IQR | Upper Bound | Detected Value | Order ID |
+|---|---:|---:|---:|---:|---:|---|
+| `Distance_KM` | 601.5 | 1313 | 711.5 | 2380.25 | 6800 | `ORD-1041` |
+| `Delivery_Days` | 2.5 | 6 | 3.5 | 11.25 | 42 | `ORD-1011` |
+| `Shipping_Cost` | 352.605 | 664.62 | 312.015 | 1132.6425 | 3450 | `ORD-1026` |
 
-The IQR method is based on the first quartile (Q1), third quartile (Q3) and interquartile range.
+The results indicate unusually high values in the three numerical columns.
 
-The calculation is:
+However, an observation outside the IQR boundaries is not automatically an error. For example, a long-distance order or a delayed delivery may be unusual but still valid. Therefore, the project flags these observations for review instead of automatically removing them.
 
-`IQR = Q3 - Q1`
+### 4. Normalization Results
 
-The lower and upper boundaries are calculated as:
+Min-Max normalization was applied to the cleaned dataset.
 
-`Lower Bound = Q1 - 1.5 × IQR`
+| Feature | Minimum | Maximum | Range |
+|---|---:|---:|---:|
+| `Distance_KM` | 152 | 6800 | 6648 |
+| `Delivery_Days` | 1 | 42 | 41 |
+| `Shipping_Cost` | 185.72 | 3450 | 3264.28 |
 
-`Upper Bound = Q3 + 1.5 × IQR`
+The normalized columns contain values between 0 and 1.
 
-Values below the lower boundary or above the upper boundary are flagged as potential outliers.
+The normalization process preserves the number and order of the cleaned records. The original columns are retained, and the normalized values are stored in additional columns.
 
-I applied this method to the following columns:
+### 5. Final Dataset Comparison
 
-- `Distance_KM`
-- `Delivery_Days`
-- `Shipping_Cost`
+| Dataset | Rows | Columns | Description |
+|---|---:|---:|---|
+| `logistics_data.csv` | 65 | 6 | Original simulated dataset |
+| `logistics_data_cleaned.csv` | 63 | 6 | Dataset after duplicate removal and missing-value treatment |
+| `logistics_data_normalized.csv` | 63 | 9 | Cleaned dataset with three additional normalized columns |
 
-The analysis identified three potential outliers in the cleaned dataset.
+The final normalized dataset contains three additional columns because normalized values are stored separately from the original numerical values.
 
-| Column | Potential Outlier | Order ID |
-|---|---:|---|
-| Distance_KM | 6800 | ORD-1041 |
-| Delivery_Days | 42 | ORD-1011 |
-| Shipping_Cost | 3450 | ORD-1026 |
+---
 
-Each of these observations was outside the corresponding IQR boundary.
+## Output Files and Visualizations
 
-I did not automatically remove these observations. A shipment might genuinely cover a long distance, take longer to arrive or cost more than other shipments. Removing such a record without checking its validity could remove useful information.
+The project generates several files to document the preprocessing process.
 
-Instead, I saved the detected records and the outlier summary in the `outputs` folder. I also generated boxplots to make the unusual values easier to inspect.
+### CSV Summary Files
 
-This step helped me understand that outlier detection and outlier removal are two different operations. Detecting an unusual value is only the first step; deciding whether it should be corrected or removed requires additional information.
-
-### 5. Min-Max Normalization
-
-The numerical features in a dataset can have different ranges. For example, delivery time is measured in days, distance is measured in kilometres, and shipping cost is recorded in INR.
-
-To demonstrate feature scaling, I applied Min-Max normalization to the three numerical columns.
-
-The formula used is:
-
-`Normalized Value = (Value - Minimum) / (Maximum - Minimum)`
-
-This transformation scales values to a range between 0 and 1, provided that the minimum and maximum are calculated from the same dataset being transformed.
-
-I applied normalization to:
-
-- `Distance_KM`
-- `Delivery_Days`
-- `Shipping_Cost`
-
-The normalized values were stored in three additional columns:
-
-- `Distance_KM_Normalized`
-- `Delivery_Days_Normalized`
-- `Shipping_Cost_Normalized`
-
-I retained the original numerical columns so that the original measurements could still be compared with the scaled values.
-
-The normalized dataset was saved as:
-
-`data/logistics_data_normalized.csv`
-
-The original cleaned dataset was not overwritten. This allowed me to preserve the cleaned measurements and keep the normalized values in a separate output file.
-
-I also checked that the normalized columns had minimum values of 0.0 and maximum values of 1.0, and generated comparison tables and charts.
-
-One limitation of Min-Max normalization is that extreme values can affect the scaling range. Since the potential outliers were retained, they also influenced the minimum and maximum values used in normalization.
-
-### 6. Saving Results and Visualizations
-
-Throughout the project, I saved the results of each processing stage rather than keeping all the work inside a single Python script.
-
-The `data` folder contains the original, cleaned and normalized datasets. The `outputs` folder contains summary tables and charts created during data exploration, cleaning, outlier detection and normalization.
-
-The CSV summary files make it easier to inspect numerical results, while the charts provide a visual way to understand the data.
-
-Keeping these outputs separate also makes the project easier to review and helps me check whether a particular preprocessing step produced the expected result.
-
-## Final Results
-
-The following table summarizes the main results obtained from the preprocessing pipeline.
-
-| Item | Result |
+| File | Purpose |
 |---|---|
-| Original dataset size | 65 rows and 6 columns |
-| Duplicate rows identified | 2 |
-| Rows remaining after duplicate removal | 63 |
-| Missing numerical values identified | 4 |
-| Missing numerical values handled | 4 |
-| Missing values in the checked cleaned columns | 0 |
-| Potential distance outliers identified | 1 |
-| Potential delivery-time outliers identified | 1 |
-| Potential shipping-cost outliers identified | 1 |
-| Total potential outliers identified | 3 |
-| Outliers automatically removed | 0 |
-| Numerical features normalized | 3 |
-| Normalized value range | 0 to 1 |
+| `missing_values_summary.csv` | Summarizes missing values identified during exploration |
+| `numerical_summary.csv` | Contains descriptive statistics for numerical columns |
+| `categorical_summary.csv` | Summarizes categorical data |
+| `outlier_summary.csv` | Records outlier-related statistics from the exploration stage |
+| `data_cleaning_summary.csv` | Summarizes the data-cleaning results |
+| `missing_values_before_after.csv` | Compares missing values before and after cleaning |
+| `outlier_detection_summary.csv` | Contains the IQR outlier-detection summary |
+| `detected_outlier_records.csv` | Records the observations flagged as potential outliers |
+| `normalization_summary.csv` | Summarizes the normalization process |
+| `normalization_comparison.csv` | Helps compare original and normalized numerical values |
 
-These results show that the original dataset was inspected, cleaned and prepared for further analysis. Duplicate records were removed, missing numerical values were handled, potential outliers were documented, and Min-Max normalization was applied to the selected numerical columns.
+### Visualization Files
 
-The outlier observations were retained intentionally because the project does not contain enough external information to confirm that they are errors.
+**`distance_distribution.png`**
 
-## How to Set Up and Run the Project
+Shows the distribution of recorded delivery distances.
 
-The project was developed using Python and Visual Studio Code on Windows.
+**`delivery_days_distribution.png`**
 
-### Step 1: Install Python
+Shows the distribution of delivery durations.
 
-Install a compatible Python version if it is not already available on your computer.
+**`shipping_cost_distribution.png`**
 
-To check the Python installation on Windows, open PowerShell or the VS Code terminal and run:
+Shows the distribution of shipping costs.
 
-```powershell
-py --version
+**`numerical_boxplots.png`**
+
+Provides a visual summary of the numerical features and their distributions.
+
+**`transport_mode_distribution.png`**
+
+Shows the number of records associated with each transport mode.
+
+**`numerical_outlier_boxplots.png`**
+
+Helps visualize potential outliers in the numerical columns.
+
+**`original_vs_normalized_boxplots.png`**
+
+Compares the distributions of original numerical features with their normalized versions.
+
+**`normalized_feature_distributions.png`**
+
+Shows the distributions of the normalized numerical features.
+
+These files help make the preprocessing results easier to inspect and understand.
+
+---
+
+## How to Run the Project
+
+Follow these steps to run the project on a Windows computer.
+
+### Prerequisites
+
+Make sure that the following are installed:
+
+- Python
+- Visual Studio Code or another Python-compatible editor
+- Required Python libraries listed in `requirements.txt`
+
+The commands below use the `py` launcher, which was used to run this project in the Windows environment.
+
+### Step 1: Open the Project Folder
+
+Open the project folder in Visual Studio Code:
+
+```text
+C:\Logistics_Preprocessing
 ```
 
-### Step 2: Open the Project Folder
+Open the VS Code terminal using:
 
-Open the `Logistics-Preprocessing` folder in Visual Studio Code.
+**Terminal → New Terminal**
 
-Make sure the terminal is opened in the project root directory, where the Python files and `requirements.txt` are located.
+Make sure the terminal is working in the project root directory.
 
-### Step 3: Install the Required Libraries
+### Step 2: Install the Required Libraries
 
-Run the following command in the terminal:
+Run:
 
 ```powershell
 py -m pip install -r requirements.txt
 ```
 
-This command installs the libraries listed in `requirements.txt`.
+Wait for the installation to finish.
 
-### Step 4: Run the Python Programs
+### Step 3: Run the Complete Pipeline
 
-The following commands run the individual scripts:
+Run the main program:
 
 ```powershell
-py create_dataset.py
+py main.py
+```
+
+The main program runs the preprocessing scripts in sequence.
+
+The pipeline performs the following stages:
+
+1. Data collection or preparation.
+2. Data exploration.
+3. Data cleaning.
+4. Outlier detection.
+5. Data normalization.
+
+When the stages complete successfully, the program displays a completion message and the locations of the original, cleaned, and normalized datasets.
+
+### Step 4: Check the Generated Files
+
+After the pipeline finishes, inspect the following folders:
+
+- `data/` for the original, cleaned, and normalized datasets.
+- `outputs/` for CSV summaries and visualizations.
+
+You can open the CSV files in Excel, a spreadsheet application, or a text editor. The PNG files can be opened directly to view the charts.
+
+### Running Individual Scripts
+
+The scripts can also be executed individually from the project root directory.
+
+Run data preparation:
+
+```powershell
 py data_collection.py
+```
+
+Run data exploration:
+
+```powershell
 py data_exploration.py
+```
+
+Run data cleaning:
+
+```powershell
 py data_cleaning.py
+```
+
+Run outlier detection:
+
+```powershell
 py outlier_detection.py
+```
+
+Run normalization:
+
+```powershell
 py normalization.py
 ```
 
-Run the programs in the appropriate order because some stages depend on files created by earlier stages.
+Running the main program is the recommended way to execute the complete pipeline because it coordinates the stages in the intended order.
 
-**Important:** `create_dataset.py` creates the sample dataset and may overwrite the existing raw CSV file. If you want to preserve changes made to the input data, keep a backup before running that script again.
+### Important Note About Dataset Generation
 
-The exploration, cleaning, outlier detection and normalization programs generate the corresponding results in the `outputs` and `data` folders.
+The `create_dataset.py` script is used to create the simulated dataset.
+
+Running this script may overwrite the existing original CSV file. Therefore, do not run it unnecessarily if you want to preserve the current dataset or any manual changes.
+
+The regular command:
+
+```powershell
+py main.py
+```
+
+is intended to run the preprocessing workflow using the existing dataset.
+
+---
 
 ## Challenges and Decisions
 
-While working on this assignment, I learned that preprocessing is not simply about removing incorrect-looking data. It is also necessary to understand the type of problem, choose a suitable method and verify the result.
+During this project, I worked on several data-preprocessing problems.
 
-One challenge was handling missing numerical values without unnecessarily losing complete information from other columns. I used median imputation for the missing numerical entries and checked the dataset after processing.
+### Handling Missing Values
 
-Another important decision concerned the potential outliers. The distance, delivery-time and shipping-cost columns contained values that were much larger than the typical observations. Although these values were flagged by the IQR method, I kept them in the cleaned dataset because the available information did not prove that they were incorrect.
+Some numerical columns contained missing values. I used median imputation to fill these gaps while keeping the records available for analysis.
 
-I also kept the original dataset separate from the cleaned and normalized versions. This made it easier to compare the different stages and reduced the risk of losing the original data.
+I also checked the missing-value counts after cleaning to confirm that the missing values in the selected numerical columns had been handled.
 
-These decisions helped me understand why each preprocessing operation should be checked rather than applied without considering its effect on the dataset.
+### Removing Duplicate Records
+
+The original dataset contained two exact duplicate rows. Keeping duplicate records could affect statistical summaries, so I removed them during the cleaning stage.
+
+### Handling Potential Outliers
+
+The dataset contained some unusually high values. Instead of deleting these records automatically, I used the IQR method to identify and document them.
+
+This decision keeps potentially meaningful logistics observations available for further investigation.
+
+### Preserving the Original Data
+
+I saved the cleaned and normalized datasets as separate files. This makes it easier to compare the results with the original dataset and reduces the risk of losing the initial data during preprocessing.
+
+### Organizing the Workflow
+
+I separated the operations into individual Python scripts. This makes the project easier to understand, test, maintain, and extend.
+
+The main program brings the individual stages together so that the entire workflow can be run using a single command.
+
+---
 
 ## What I Learned
 
-Through this assignment, I gained practical experience in preparing a dataset for analysis using Python.
+Through this project, I gained practical experience with the early stages of a data-analysis workflow.
 
-I practised reading CSV files, examining rows and columns, checking data types, calculating descriptive statistics and identifying missing values and duplicate records using Pandas.
+I learned how to load and inspect CSV data using Pandas, calculate descriptive statistics, identify missing values, remove duplicate records, and use median imputation to handle missing numerical data.
 
-I also learned how median imputation can be used to handle missing numerical values, how the IQR method identifies potential outliers, and how Min-Max normalization changes the scale of numerical features.
+I also learned how the IQR method can be used to identify potential outliers and why unusual observations should be investigated rather than removed automatically.
 
-Another useful part of the assignment was saving intermediate results and visualizations. This helped me understand the importance of documenting the work and making the output easier to verify.
+Another important part of the project was Min-Max normalization. I learned how scaling numerical values to a common range can help prepare data for certain statistical and machine-learning methods.
 
-I also gained experience organizing Python scripts and project files in Visual Studio Code and maintaining the project using Git and GitHub.
+I also gained experience organizing a Python project into separate scripts, generating CSV reports and visualizations, installing libraries through `requirements.txt`, and using Git and GitHub to maintain the project.
 
-Overall, this assignment helped me connect the concepts of data collection, data cleaning and preprocessing with a practical example. It gave me a better understanding of why data quality matters before performing more advanced analysis or building a machine learning model.
+Most importantly, I understood that preprocessing is not just about modifying a dataset. Each change should have a clear purpose, and the results should be checked to make sure that the data is suitable for the next stage of analysis.
+
+---
 
 ## Limitations and Future Improvements
 
-This project uses a simulated dataset with a limited number of records. Therefore, the results should be treated as a demonstration of data preprocessing techniques rather than conclusions about a real logistics company.
+This project demonstrates basic data-preprocessing techniques using a simulated dataset. It is intended for learning and does not represent a production logistics system.
 
-The IQR method flags statistical outliers but cannot determine by itself whether a record is incorrect. Additional shipment information or domain knowledge would be needed to make that decision.
+The project could be improved in several ways:
 
-Similarly, median imputation is a practical way to fill the missing numerical values in this exercise, but another dataset might require a different strategy.
+1. Use a real logistics dataset from a reliable source.
+2. Add stronger validation for data types, invalid values, and inconsistent categories.
+3. Record more detailed information about each cleaning operation.
+4. Compare median imputation with other missing-value treatment methods.
+5. Investigate detected outliers using business rules before deciding whether to retain or remove them.
+6. Add automated tests to verify the results of each preprocessing stage.
+7. Introduce logging and clearer error handling for unexpected input files.
+8. Extend the project with exploratory analysis or predictive modelling after the data has been prepared.
 
-In the future, the project could be improved by using a larger real-world dataset, adding more validation rules, comparing different missing-value handling techniques and recording more detailed information about each processing step.
+These improvements would help make the workflow more suitable for larger and more realistic datasets.
 
-A combined execution script and an automatically generated project report could also make the workflow easier to run and document.
+---
 
 ## Conclusion
 
-This project demonstrates a basic logistics data preprocessing workflow using Python. Starting with a simulated dataset of 65 records, I inspected the data, identified two duplicate rows and four missing numerical values, removed the duplicates, and handled the missing values using median imputation.
+This project demonstrates a basic end-to-end data-preprocessing workflow for logistics analysis using Python.
 
-I then used the IQR method to identify three potential outliers and applied Min-Max normalization to distance, delivery time and shipping cost. The cleaned and normalized datasets were saved separately, along with summary tables and visualizations.
+Starting with a simulated dataset containing 65 rows and 6 columns, I explored the data, removed two duplicate records, handled four missing numerical values, identified three potential outlier observations using the IQR method, and applied Min-Max normalization to three numerical features.
 
-The main outcome of this assignment is a structured preprocessing workflow that shows how raw data can be checked and prepared before further analysis. The work also helped me practise Python programming, data handling, visualization and project organization.
+The final cleaned dataset contains 63 rows and 6 columns. The normalized dataset contains 63 rows and 9 columns because it includes three additional normalized features.
+
+The project also generates summary CSV files and visualizations to help inspect the results at each stage.
+
+Overall, this assignment helped me understand how data collection, cleaning, outlier detection, and normalization contribute to preparing data for further analysis. It also gave me practical experience in building and organizing a Python project with separate scripts and a main execution program.
